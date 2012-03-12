@@ -1,0 +1,25 @@
+{
+  "author": "mklabs",
+  "name": "dploy",
+  "description": "Quick and Dirty static site deployment on Amazon S3, Rackspace Cloudfiles or Github Pages",
+  "version": "0.0.1",
+  "main": "lib/dploy",
+  "bin": "bin/dploy",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mklabs/deploy.git"
+  },
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {
+    "knox": "0.0.9",
+    "cloudfiles": "~0.3.3",
+    "glob": "~3.1.5"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "scripts": {
+    "test": "node test/*.js"
+  }
+}
