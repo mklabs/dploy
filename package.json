@@ -7,7 +7,7 @@
   "bin": "bin/dploy",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mklabs/deploy.git"
+    "url": "git://github.com/mklabs/dploy.git"
   },
   "engines": {
     "node": "~0.6.10"
