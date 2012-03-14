@@ -6,8 +6,8 @@ src=_site/
 deploy=_deploy/
 
 ## todo have it passed as env variables
-remote=$NABE_REMOTE_URL
-branch=$NABE_REMOTE_BRANCH
+remote=$DPLOY_REMOTE_URL
+branch=$DPLOY_REMOTE_BRANCH
 
 [ -z $remote ] && echo "Required DPLOY_REMOTE_URL unset" && exit 1
 [ -z $branch ] && echo "Required DPLOY_REMOTE_BRANCH unset" && exit 1

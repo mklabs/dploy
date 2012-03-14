@@ -1,6 +1,6 @@
 
 var events = require('events'),
-	assert = require('assert');
+  assert = require('assert');
 
 var dploy = require('..');
 
@@ -14,18 +14,18 @@ assert.ok(git instanceof dploy.Publisher, 'should be an instance of Publisher');
 
 
 try {
-	new Git;
-	assert.fail('Should raise appropriate error with missing config');
+  new Git;
+  assert.fail('Should raise appropriate error with missing config');
 } catch(e) {
-	if(e instanceof assert.AssertionError) throw e;
-	assert.equal(e.message, 'Required deploy.url config unset');
+  if(e instanceof assert.AssertionError) throw e;
+  assert.equal(e.message, 'Required deploy.url config unset');
 }
 
 
 try {
-	new Git({ url: 'foobar' });
-	assert.fail('Should raise appropriate error with missing config');
+  new Git({ url: 'foobar' });
+  assert.fail('Should raise appropriate error with missing config');
 } catch(e) {
-	if(e instanceof assert.AssertionError) throw e;
-	assert.equal(e.message, 'Required deploy.branch config unset');
+  if(e instanceof assert.AssertionError) throw e;
+  assert.equal(e.message, 'Required deploy.branch config unset');
 }

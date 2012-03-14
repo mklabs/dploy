@@ -19,7 +19,7 @@ var fs = require('fs'),
   spawn = require('child_process').spawn;
 
 var testTimeout = 8000,
-  verbose = true,
+  verbose = false,
   failed = [],
   success = [],
   pathPrefix = __dirname;
@@ -76,6 +76,12 @@ function runTests(tests) {
       console.log('Summary:');
       console.log('  ' + success.length + '\tpassed tests');
       console.log('  ' + failed.length + '\tfailed tests');
+
+      if(failed.length) console.log(failed.map(function(f) {
+        return '    ✘ ' + f;
+      }).join('\n'));
+      console.log();
+
       process.exit(failed.length);
     }
     runTest(tests[++index], next);
